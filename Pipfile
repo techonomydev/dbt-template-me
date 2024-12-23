@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"dbt-<bigquery/snowflake>" = "^1.9.0"
+elementary-data = "0.16.1"
+
+[dev-packages]
+shandy-sqlfmt = {extras = ["jinjafmt"], version = "*"}
+
+
+[requires]
+python_version = "3.12"
+

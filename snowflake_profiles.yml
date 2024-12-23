@@ -1,0 +1,33 @@
+common_config: &common_config
+  type: snowflake
+  account: <your_account>
+  user: <your_username>
+  password: <your_password>
+  authenticator: username_password_mfa
+  role: <your_role>
+  database: <your_database>
+  warehouse: <your_warehouse>
+  threads: 16
+  client_session_keep_alive: False
+  connect_retries: 1
+  connect_timeout: 10
+
+<your_project_name>:
+  outputs:
+    dev:
+      <<: *common_config
+      schema: dev_<your_name>
+    prod:
+      <<: *common_config
+      schema: prod
+  target: dev
+
+elementary:
+  outputs:
+    dev:
+      <<: *common_config
+      schema: dev_elementary
+    prod:
+      <<: *common_config
+      schema: prod_elementary
+  target: dev

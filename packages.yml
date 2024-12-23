@@ -1,0 +1,11 @@
+packages:
+
+  - package: elementary-data/elementary
+    version: 0.16.0
+    ## Docs: https://docs.elementary-data.com
+
+  - package: dbt-labs/dbt_utils
+    version: 1.1.1
+ 
+  - git: "https://github.com/techonomydev/techonomy-dbt-utils.git"
+    revision: "v1.1.0"

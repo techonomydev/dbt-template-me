@@ -1,0 +1,31 @@
+common_config: &common_config
+  job_execution_timeout_seconds: 1000
+  job_retries: 1
+  location: <your location, e.g. europe-west1>
+  method: oauth
+  priority: interactive
+  project: <your_gcp_project_id>
+  threads: 16
+  type: bigquery
+
+
+<your_project_name>:
+  outputs:
+    dev:
+      <<: *common_config
+      dataset: dev_<your_name>
+    prod:
+      <<: *common_config
+      dataset: prod
+  target: dev
+
+elementary:
+  outputs:
+    dev:
+      <<: *common_config
+      schema: dev_elementary
+    prod:
+      <<: *common_config
+      schema: prod_elementary
+  target: dev
+
