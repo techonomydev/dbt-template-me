@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-"dbt-<bigquery/snowflake>" = "^1.9.0"
+"dbt-<bigquery/snowflake>" = "1.9.*"
 elementary-data = "0.16.1"
 
 [dev-packages]
