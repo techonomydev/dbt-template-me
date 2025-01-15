@@ -1,0 +1,22 @@
+[sqlfluff]
+templater = dbt
+dialect = snowflake
+exclude_rules = aliasing.forbid, structure.column_order, ambiguous.column_references, capitalisation.literals, ambiguous.set_columns
+
+[sqlfluff:templater:jinja]
+apply_dbt_builtins = True
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+extended_capitalisation_policy = lower
+
+[sqlfluff:rules:references.keywords]
+ignore_words = email,first_name,last_name,name
+
+[sqlfluff:rules:convention.casting_style]
+preferred_type_casting_style = shorthand
