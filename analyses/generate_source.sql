@@ -1,4 +1,5 @@
-{{ codegen.generate_source(
+-- uncomment and fill in if you would like to use codegen
+{# {{ codegen.generate_source(
     schema_name='<name_of_your_schema>', 
     database_name=target.database,
     table_names=none,
@@ -13,4 +14,4 @@
     case_sensitive_databases=False,
     case_sensitive_schemas=False,
     case_sensitive_tables=False,
-    case_sensitive_cols=False) }}
+    case_sensitive_cols=False) }} #}
