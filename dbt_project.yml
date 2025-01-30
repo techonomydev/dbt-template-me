@@ -33,19 +33,19 @@ models:
   your_project_name:
     # Config indicated by + and applies to all files under models/example/
     bronze:
-      schema: bronze
+      +schema: bronze
       +materialized: table
       +docs:
           node_color: "#B08D57"
 
     silver:
-      schema: silver
+      +schema: silver
       +materialized: view
       +docs:
           node_color: "#C0C0C0"
 
     gold:
-      schema: gold
+      +schema: gold
       materialized: table
       +docs:
           node_color: "#D4AF37"
