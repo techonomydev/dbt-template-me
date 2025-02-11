@@ -1,0 +1,20 @@
+common_config: &common_config
+  type: snowflake
+  account: markteffect-markteffect_general
+  user: <your_email>
+  authenticator: externalbrowser
+  role: data_analist
+  database: dbt_tutorial
+  warehouse: data_analist_wh
+  threads: 16
+  client_session_keep_alive: False
+  connect_retries: 1
+  connect_timeout: 10
+
+markteffect:
+  outputs:
+    dev:
+      <<: *common_config
+      schema: dev_<your_name>
+  target: dev
+
