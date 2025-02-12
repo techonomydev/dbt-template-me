@@ -50,16 +50,6 @@ models:
       +docs:
           node_color: "#D4AF37"
 
-  elementary:
-    ## elementary models will be created in the schema '<your_schema>_elementary'
-    +schema: "elementary"
-    enabled: "{{ target.name in ['prod'] }}"
-
-
 seeds:
   your_project_name:
     schema: seeds
-
-
-on-run-end:
-  - "{{ techonomy_dbt_utils.drop_old_tables() }}" 
