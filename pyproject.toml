@@ -1,10 +1,7 @@
 [project]
 name = "dbt-template-me"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "DvGils",email = "demian_vg@hotmail.nl"}
-]
+description = "Template repo to use as setup for dbt"
 readme = "README.md"
 requires-python = "^3.10"
 dependencies = [
