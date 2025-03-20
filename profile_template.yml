@@ -1,4 +1,4 @@
-common_config: &common_config
+sso_config: &sso_config
   type: snowflake
   account: markteffect-markteffect_general
   user: <your_email>
@@ -11,10 +11,20 @@ common_config: &common_config
   connect_retries: 1
   connect_timeout: 10
 
+key_config: &key_config
+  type: snowflake
+  account: markteffect-markteffect_general
+  user: <your_email>
+  role: data_analist
+  database: dbt_tutorial
+  warehouse: data_analist_wh
+  threads: 16
+  private_key: <your-private-key-base64>
+
 markteffect:
   outputs:
     dev:
-      <<: *common_config
+      <<: *key_config # or <<: *sso_config
       schema: dev_<your_name>
   target: dev
 
